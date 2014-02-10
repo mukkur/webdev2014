@@ -14,9 +14,6 @@
 					<li> Save</li>
 				</ul>
 			</li>
-			<li>
-				Options
-			</li>
 		</ul>
 	</body>
 </html>
