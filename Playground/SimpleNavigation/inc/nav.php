@@ -14,6 +14,9 @@
 		    <ul class="nav navbar-nav">
 		      <li class="active"><a href="contact.php">Contact Us</a></li>
 		      <li><a href="business.php">Business</a></li>
+		      <li><a href="service.php">Service</a></li>
+		      <li><a href="about.php">About Us</a></li>
+		      
 		      <li class="dropdown">
 		        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Super Menu <b class="caret"></b></a>
 		        <ul class="dropdown-menu">
