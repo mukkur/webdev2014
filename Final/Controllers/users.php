@@ -8,5 +8,6 @@
 		case 'index':
 			break;
 		default:
+			$model = Users::Get();
 			include __DIR__ . "/../Views/Users/$action.php";
 	}
