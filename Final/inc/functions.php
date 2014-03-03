@@ -7,6 +7,14 @@
 		$conn = mysqli_connect('localhost', 'mukkur1', $password, 'mukkur1_db');
 		return $conn;
 	}
-	$conn = GetConnection();   
-	print_r($conn);
-	 echo 'Test';
+	function fetch_all($sql){
+		$conn = GetConnection();
+					$results = $conn->query("$sql");
+					$arr = array();
+					while($row = $results->fetch_assoc()){
+						$arr[] = $row;
+					}
+					$conn->close();
+					
+					return $arr;
+	}

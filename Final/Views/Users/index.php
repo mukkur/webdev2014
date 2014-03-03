@@ -1,3 +1,4 @@
-<?php
-	include_once __DIR__.'/../inc/function.php';
-	
+
+<pre>
+	<? print_r($model);?>
+</pre>
