@@ -6,7 +6,7 @@
 	@$format = $_REQUEST['format'];
 
 	switch ($action){
-		case 'create':
+		case 'new':
 			break;
 		case 'update':
 			break;
@@ -14,6 +14,7 @@
 			break;
 		default:
 			$model = Users::Get();
+			?><pre>?>print_r($model)?></pre>?>
 			if($view == null) $view = 'index';
 	}
 
