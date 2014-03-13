@@ -7,7 +7,8 @@
 				if($id == null){
 					// Get all records
 					print_r("all");
-					return fetch_all("SELECT * FROM 2014Spring_Users");
+					$sql  = "SELECT * FROM 2014Spring_Users U Join 2014Spring_Keywords K ON U.UserType = K.id";
+					return fetch_all(sql);
 				}else{
 					// Get an record
 				}

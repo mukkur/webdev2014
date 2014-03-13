@@ -5,16 +5,22 @@
 	@$view = $action = $_REQUEST['action'];
 	@$format = $_REQUEST['format'];
 
+
 	switch ($action){
 		case 'new':
+			$view = 'edit';
 			break;
-		case 'update':
+		case 'edit':
+			break;
+		case 'save':
+			//	TODO: Validate
+			Users::Create($_REQUEST);
+			$view = 'edit';
 			break;
 		case 'delete':
 			break;
 		default:
 			$model = Users::Get();
-			?><pre>?>print_r($model)?></pre>?>
 			if($view == null) $view = 'index';
 	}
 
