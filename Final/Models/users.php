@@ -1,38 +1,42 @@
-<?php
-	include_once __DIR__ .'/../inc/functions.php';
-	 
-	class Users  {
-			static public  function Get($id = null)
-			{
-				if($id == null){
-					// Get all records
-					print_r("all");
-					$sql  = "SELECT * FROM 2014Spring_Users U Join 2014Spring_Keywords K ON U.UserType = K.id";
-					return fetch_all(sql);
-				}else{
-					// Get an record
-				}
-			}
-			static public function Create($row)
-			{
-				
-			}
-			static public function Blank()
-			{
-				return array( 'id' => null);
-			}
-			static public function Update($row)
-			{
-				
-			}
-			static public function Delete($id)
-			{
-				
-			}
-			static public function Validate($row)
-			{
-				
-			}
-		}
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/css/jquery.dataTables.min.css" />
+	<h2>
+		List of Users
+	</h2>
+
+	<a href="?action=new">Create New</a>
+
+	<table class="table table-striped table-bordered table-hover">
+		<thead>
+			<tr>
+				<th>FirstName</th>
+				<th>LastName</th>
+				<th>Password</th>
+				<th>fbid</th>
+				<th>UserType</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<? foreach ($model as $row): ?>
+				<tr>
+					<td><?=$row['FirstName']?></td>
+					<td><?=$row['LastName']?></td>
+					<td><?=$row['Password']?></td>
+					<td><?=$row['fbid']?></td>
+					<td><?=$row['UserType_Name']?></td>
+				</tr>
+			<? endforeach; ?>
+			
+		</tbody>
+	</table>
 	
-	
+	<? function JavaScripts(){ ?>
+		<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/jquery.dataTables.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				$(".table").dataTable();
+				
+			})
+		</script>
+	<? } ?>
