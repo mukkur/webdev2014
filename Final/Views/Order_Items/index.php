@@ -3,7 +3,7 @@
 	?>
 	<link rel="stylesheet" type="test/css" href="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/css/jquery.dataTables.css" />
 	<h2>
-		List of Contact Methods
+		List of Order Items
 	</h2>
 	
 	<style type="text/css">
@@ -24,9 +24,11 @@
 	<table class="table table-striped table-bordered table-hover">
 		<thead>
 			<tr>
-				<th>Contact Method</th>
-				<th>Value</th>
-				<th>Users Name</th>
+				<th>Order Id</th>
+				<th>Product Id</th>
+				<th>Product Name</th>
+				<th>Customer's Name</th>
+				<th>Address</th>
 				<th>Edit</th>
 			</tr>
 		</thead>
@@ -34,9 +36,11 @@
 			
 			<? foreach ($model as $row): ?>
 				<tr class="<?=$id==$row['id'] ? "highlighted" : "" ?>">
-					<td><?=$row['ContactTypeName']?></td>
-					<td><?=$row['Value']?></td>
+					<td><?=$row['Order_id']?></td>
+					<td><?=$row['Product_id']?></td>
+					<td><?=$row['ProductName']?></td>
 					<td><?=$row['LastName']?>, <?=$row['FirstName']?></td>
+					<td><?=$row['Addresses']?></td>
 					<td>
 						<div class="btn-grou[]">
 							<a class="btn btn-sm btn-default glyphicon glyphicon-edit" title="Edit" href="?action=edit&id=<?=$row['id']?>"></a>
@@ -85,7 +89,7 @@
 					event.preventDefault();
 					$.get(this.href, function(data){
 						
-						if(confirm("Are you sure that you want to delete " + data.data.FirstName + " " + data.data.LastName + "'s Contact method?")){
+						if(confirm("Are you sure that you want to delete " + data.data.FirstName + " " + data.data.LastName + "'s Address?")){
 							$.post(that.href, function(data){
 								if(data.success){
 									//msg user success
@@ -117,3 +121,4 @@
 			})
 		</script>
 	<? } ?>
+	

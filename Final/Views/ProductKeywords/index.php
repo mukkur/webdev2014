@@ -1,3 +1,0 @@
-<pre>
-	<? echo $model ?>
-</pre>

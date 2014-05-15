@@ -9,7 +9,7 @@ class Accounts {
 
 	public static function DoLogin($email, $password) {
 		$sql ="	SELECT *
-				From 2013Fall_Users U Join 2013Fall_ContactMethods CM on U.id=CM.User_Id
+				From 2014Spring_Users U Join 2014Spring_ContactMethods CM on U.id=CM.User_Id
 				WHERE CM.Value = '$email'";
 		$model = fetch_all($sql);
 
@@ -46,3 +46,5 @@ class Accounts {
 	}
 
 }
+
+

@@ -1,29 +1,27 @@
 <?php
 	include_once __DIR__ . '/../inc/functions.php';
 
-	// C.R.U.D: Create Read Update Delete
-	class Addresses {
-		// Read
+	class Addresses  {
+
 		static public function Get($id = null)
 		{
-			if ($id == null){
-				// Get all records
-				return fetch_all("SELECT * FROM 2014Spring_Addreses");
+			if($id == null){
+				//	Get all records
+
+				return fetch_all("SELECT * FROM 2014Spring_Addresses");
 			}else{
-				// Get one record
+				// Get on record
 			}
 		}
 
-		// Create
 		static public function Create($row)
 		{
 
 		}
 
-
 		static public function Blank()
 		{
-			return array('id' => null);
+			return array( 'id' => null);
 		}
 
 		static public function Update($row)
@@ -40,4 +38,5 @@
 		{
 
 		}
+
 	}

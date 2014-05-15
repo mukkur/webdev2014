@@ -5,6 +5,8 @@
 	@$view = $action = $_REQUEST['action'];
 	@$format = $_REQUEST['format'];
 
+
+
 	switch ($action){
 		case 'create':
 			break;
@@ -13,7 +15,7 @@
 		case 'delete':
 			break;
 		default:
-			$model = Keywords::Get();
+			$model = Users::Get();
 			if($view == null) $view = 'index';
 	}
 

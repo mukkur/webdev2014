@@ -34,6 +34,7 @@
 		</thead>
 		<tbody>
 			
+			
 			<? foreach ($model as $row): ?>
 				<tr class="<?=$id==$row['id'] ? "highlighted" : "" ?>">
 					<td><?=$row['FirstName']?></td>
@@ -122,9 +123,6 @@
 		</script>
 	<? } ?>
 	
-
-
-
 
 
 

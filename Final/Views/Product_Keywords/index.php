@@ -1,25 +1,27 @@
- <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/datatables/1.9.4/css/jquery.dataTables.min.css" />
     <style>
     	.main{
     		margin-top: 20px;
     	}
     </style>
     
-    <p class="main">This is the Keywords Section of my eCommerce project.</p>
-    <h2>
-		List of Keywords
+    <p class="main">This is the Product Keywords Section of my eCommerce project.</p>
+	<h2>
+		List of Product Keywords
 	</h2>
 	<table class="table table-striped table-bordered table-hover">
 		<thead>
 			<tr>
-				<th>Name</th>
+				<th>id</th>
+
 			</tr>
 		</thead>
 		<tbody>
 
 			<? foreach ($model as $row): ?>
 				<tr>
-					<td><?=$row['Name']?></td>
+					<td><?=$row['id']?></td>
+					
 				</tr>
 			<? endforeach; ?>
 			
@@ -37,4 +39,3 @@
 		</script>
 	<? } ?>
 	
-

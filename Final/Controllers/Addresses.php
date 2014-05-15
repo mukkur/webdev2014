@@ -5,6 +5,8 @@
 	@$view = $action = $_REQUEST['action'];
 	@$format = $_REQUEST['format'];
 
+
+
 	switch ($action){
 		case 'create':
 			break;

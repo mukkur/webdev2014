@@ -11,7 +11,9 @@
 			$view = 'edit';
 			break;
 		case 'edit':
+
 			$model = Users::Get($_REQUEST['id']);
+
 			break;
 		case 'save':
 			$sub_action = empty($_REQUEST['id']) ? 'created' : 'updated';
@@ -51,7 +53,8 @@
 			include __DIR__ . "/../Views/Users/$view.php";			
 			break;
 		default:
-			$view = __DIR__ . "/../Views/Users/$view.php";	
+
+			$view = __DIR__ . "/../Views/Users/$view.php";
 			include __DIR__ . "/../Views/Shared/_Layout.php";
 			break;
 	}

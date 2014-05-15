@@ -5,6 +5,8 @@
 	@$view = $action = $_REQUEST['action'];
 	@$format = $_REQUEST['format'];
 
+
+
 	switch ($action){
 		case 'create':
 			break;
@@ -13,16 +15,16 @@
 		case 'delete':
 			break;
 		default:
-			$model = OrderItems::Get();
 			if($view == null) $view = 'index';
+			$model = Users::Get();
 	}
 
 	switch ($format) {
 		case 'plain':
-			include __DIR__ . "/../Views/OrderItems/$view.php";			
+			include __DIR__ . "/../Views/Product_Keywords/$view.php";			
 			break;
 		default:
-			$view = __DIR__ . "/../Views/OrderItems/$view.php";	
+			$view = __DIR__ . "/../Views/Product_Keywords/$view.php";	
 			include __DIR__ . "/../Views/Shared/_Layout.php";
 			break;
 	}
