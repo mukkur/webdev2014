@@ -62,7 +62,7 @@
 		static public function Delete($id)
 		{
 			$conn = GetConnection();
-			$sql = "DELETE FROM 2013Fall_Users WHERE id = $id";
+			$sql = "DELETE FROM 2014Spring_Users WHERE id = $id";
 			//echo $sql;
 			$results = $conn->query($sql);
 			$error = $conn->error;
