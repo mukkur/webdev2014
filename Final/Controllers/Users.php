@@ -9,6 +9,7 @@
 	switch ($action){
 		case 'new':
 			$view = 'edit';
+			print_r("Hello");
 			break;
 		case 'edit':
 
